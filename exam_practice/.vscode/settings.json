@@ -1,0 +1,6 @@
+{
+	"files.associations": {
+		"__locale": "c",
+		"unistd.h": "c"
+	}
+}
