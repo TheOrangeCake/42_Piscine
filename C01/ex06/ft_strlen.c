@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hoannguy <hoannguy@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/21 10:40:00 by hoannguy          #+#    #+#             */
-/*   Updated: 2024/07/09 20:39:56 by hoannguy         ###   ########.fr       */
+/*   Created: 2024/07/09 19:37:59 by hoannguy          #+#    #+#             */
+/*   Updated: 2024/07/09 19:41:43 by hoannguy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+int	ft_strlen(char *str)
+{
+	int	i;
 
-void	ft_putstr(char *str)
-{
-	while (*str != '\0')
+	i = 0;
+	while (str[i])
 	{
-		write(1, str, 1);
-		str++;
+		i++;
 	}
+	return (i);
 }
+
 /*
-int	main(void)
+#include <stdio.h>
+
+int	main()
 {
-	ft_putstr("hello, \\0 moi c'est Nguyen \\0");
+	int	result;
+
+	result = ft_strlen("hello 1234567");
+	printf("%d\n", result);
 	return (0);
 }
 */

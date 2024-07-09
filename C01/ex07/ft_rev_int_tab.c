@@ -1,29 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hoannguy <hoannguy@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/21 10:40:00 by hoannguy          #+#    #+#             */
-/*   Updated: 2024/07/09 20:39:56 by hoannguy         ###   ########.fr       */
+/*   Created: 2024/07/09 19:42:27 by hoannguy          #+#    #+#             */
+/*   Updated: 2024/07/09 19:59:03 by hoannguy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putstr(char *str)
+void	ft_rev_int_tab(int *tab, int size)
 {
-	while (*str != '\0')
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < size)
 	{
-		write(1, str, 1);
-		str++;
+		j = tab[size - 1];
+		tab[size - 1] = tab[i];
+		tab[i] = j;
+		i++;
+		size--;
 	}
 }
+
 /*
-int	main(void)
+#include <stdio.h>
+
+int	main()
 {
-	ft_putstr("hello, \\0 moi c'est Nguyen \\0");
+	int	i;
+	int tab[15] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+	i = 0;
+	ft_rev_int_tab(tab, 9);
+	while (tab[i])
+	{
+		printf("%d\n", tab[i]);
+		i++;
+	}
 	return (0);
 }
 */
