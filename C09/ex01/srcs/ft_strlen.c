@@ -6,11 +6,12 @@
 /*   By: hoannguy <hoannguy@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 18:56:43 by hoannguy          #+#    #+#             */
-/*   Updated: 2024/07/09 16:04:12 by hoannguy         ###   ########.fr       */
+/*   Updated: 2024/06/24 19:16:31 by hoannguy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include <stdio.h>
 
 int	ft_strlen(char *str)
 {
@@ -28,8 +29,6 @@ int	ft_strlen(char *str)
 	return (a);
 }
 /*
-#include <stdio.h>
-
 int main()
 {
     char    word1a[50] = "hello";

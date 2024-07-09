@@ -6,7 +6,7 @@
 /*   By: hoannguy <hoannguy@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 13:31:32 by hoannguy          #+#    #+#             */
-/*   Updated: 2024/07/08 19:56:23 by hoannguy         ###   ########.fr       */
+/*   Updated: 2024/07/09 17:26:57 by hoannguy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,7 @@ char	**ft_split(char *str, char *charset)
 	{
 		if (newstr[i] != '\0')
 		{
-			tab[j] = &newstr[i];
+			tab[j] = ft_strdup(&newstr[i]);
 			j++;
 			while (newstr[i] != '\0')
 				i++;
@@ -113,6 +113,7 @@ char	**ft_split(char *str, char *charset)
 	tab[j] = NULL;
 	return (tab);
 }
+
 
 #include <stdio.h>
 

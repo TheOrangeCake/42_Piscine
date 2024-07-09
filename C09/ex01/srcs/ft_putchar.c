@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hoannguy <hoannguy@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/21 10:40:00 by hoannguy          #+#    #+#             */
-/*   Updated: 2024/07/09 17:03:54 by hoannguy         ###   ########.fr       */
+/*   Created: 2024/06/19 10:51:58 by hoannguy          #+#    #+#             */
+/*   Updated: 2024/06/19 16:53:43 by hoannguy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putstr(char *str)
+void	ft_putchar(char c)
 {
-	while (*str != '\0')
-	{
-		write(1, str, 1);
-		str++;
-	}
+	write(1, &c, 1);
 }
-
 /*
-int	main(void)
-{
-	ft_putstr("hello, \\0 moi c'est Nguyen \\0");
-	return (0);
+  int main(void) {
+	ft_putchar ('c');
+	return(0);
 }
 */

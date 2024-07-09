@@ -6,7 +6,7 @@
 /*   By: hoannguy <hoannguy@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 13:31:32 by hoannguy          #+#    #+#             */
-/*   Updated: 2024/07/08 19:01:19 by hoannguy         ###   ########.fr       */
+/*   Updated: 2024/07/09 17:31:37 by hoannguy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,7 @@ char	**ft_split(char *str, char *charset)
 	{
 		if (newstr[i] != '\0')
 		{
-			tab[j] = &newstr[i];
+			tab[j] = ft_strdup(&newstr[i]);
 			j++;
 			while (newstr[i] != '\0')
 				i++;
@@ -114,22 +114,25 @@ char	**ft_split(char *str, char *charset)
 	return (tab);
 }
 
-// #include <stdio.h>
+/*
+#include <stdio.h>
 
-// int main()
-// {
-// 	int	i;
-//     char str[] = "banana and apple";
-//     char charset[] = "ap";
+int main()
+{
+	int	i;
+    char str[] = "banana and apple";
+    char charset[] = "ap";
 
-// 	i = 0;
-// 	char **result = ft_split(str, charset);
-// 	printf("Original string: \"%s\"\n", str);
-//     printf("Split strings:\n");
-//     while (result[i])
-//     {
-//         printf("[%d]: \"%s\"\n", i, result[i]);
-// 		i++;
-//     }
-//     return (0);
-// }
+	i = 0;
+	char **result = ft_split(str, charset);
+	printf("Original string: \"%s\"\n", str);
+    printf("Split strings:\n");
+    while (result[i])
+    {
+        printf("[%d]: \"%s\"\n", i, result[i]);
+		i++;
+    }
+	printf("[%d]: \"%s\"\n", i, result[i]);
+    return (0);
+}
+*/

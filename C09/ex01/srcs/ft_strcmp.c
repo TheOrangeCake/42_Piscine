@@ -6,11 +6,12 @@
 /*   By: hoannguy <hoannguy@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 17:41:29 by hoannguy          #+#    #+#             */
-/*   Updated: 2024/07/09 16:04:58 by hoannguy         ###   ########.fr       */
+/*   Updated: 2024/07/08 16:46:56 by hoannguy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include <stdio.h>
 
 int	ft_strcmp(char *s1, char *s2)
 {
@@ -27,8 +28,6 @@ int	ft_strcmp(char *s1, char *s2)
 }
 
 /*
-#include <stdio.h>
-
 int main()
 {
 	char	str1[50] = "hello";
